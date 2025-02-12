@@ -18,6 +18,7 @@ function situation_seperator(n) {
         case "=": calculate(); break;
         default: numberOnClick(n); break;
     }
+    console.log(ram);
 }
 
 function addDot() {
@@ -40,6 +41,9 @@ function clear() {
 function operatorOnClick(operator) {
     operator_status(4);
     if (ram === "0") return;
+    if (ram.slice(-3) === " + " || ram.slice(-3) === " - " || ram.slice(-3) === " x " || ram.slice(-3) === " / ")
+        ram = ram.slice(0, -3);
+    console.log('keep running');
     if (ram.includes("+") || ram.includes("-") || ram.includes("x") || ram.includes("/"))
         calculate();
     switch (operator) {

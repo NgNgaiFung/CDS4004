@@ -33,6 +33,7 @@ function clear() {
     display = "0";
     trigger = 0;
     trigger2 = 0;
+    operator_status(4);
     document.getElementById('displayValue').innerText = display;
 }
 
@@ -84,7 +85,7 @@ function numberOnClick(digit) {
 }
 
 function calculate() {
-    if (!ram.includes("+") || !ram.includes("-") || !ram.includes("x") || !ram.includes("/")) return;
+    if (!ram.includes("+") && !ram.includes("-") && !ram.includes("x") && !ram.includes("/")) return console.log("No operator");
     try {
         let result = eval(ram.replace(/x/g, '*'));
         ram = result.toString();

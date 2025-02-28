@@ -1,0 +1,18 @@
+.containers {
+    background-color: #D8E3FF;
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px
+}
+
+.containers > .container {
+    background-color: #f4f4f4;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    width: 140px;
+}
+
+.containers > .container > img {
+    width: 120px;
+    height: 100%;
+}
